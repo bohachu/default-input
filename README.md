@@ -30,11 +30,6 @@ Alternatively, you can download the `defaultInput.js` file from the repository a
   <input type="email" id="email">
   <!-- Include the script -->
   <script src="https://cdn.jsdelivr.net/gh/bohachu/default-input/defaultInput.js"></script>
-  <!-- Initialize the library -->
-  <script>
-    const defaultInput = new DefaultInput();
-    defaultInput.init();
-  </script>
 </body>
 </html>
 ```
