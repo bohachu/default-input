@@ -1,4 +1,5 @@
 // defaultInput.js
+// v1.0.0 
 (function() {
   class DefaultInput {
     constructor() {
