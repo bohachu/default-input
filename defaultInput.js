@@ -1,6 +1,6 @@
+// v1.1.0 defaultInput.js
 // defaultInput.js
-// v1.0.1
-(function() {
+(function () {
   class DefaultInput {
     constructor() {
       this.setDefaultInputValue = this.setDefaultInputValue.bind(this);
@@ -14,19 +14,30 @@
         return;
       }
 
-      const defaultValue = '';
+      const defaultValue = "";
       const savedInputValue = localStorage.getItem(inputId) || defaultValue;
       inputElement.value = savedInputValue;
 
-      inputElement.addEventListener('change', () => {
+      inputElement.addEventListener("change", () => {
         localStorage.setItem(inputId, inputElement.value);
       });
     }
 
     init() {
-      document.addEventListener('DOMContentLoaded', () => {
-        const inputElements = document.querySelectorAll('input');
-        inputElements.forEach(inputElement => {
+      const firstForm = document.querySelector("form");
+      if (!firstForm) {
+        console.error("Form not found.");
+        return;
+      }
+      firstForm.addEventListener("submit", (event) => {
+        const inputElements = document.querySelectorAll("input");
+        inputElements.forEach((inputElement) => {
+          localStorage.setItem(inputElement.id, inputElement.value);
+        });
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const inputElements = document.querySelectorAll("input");
+        inputElements.forEach((inputElement) => {
           this.setDefaultInputValue(inputElement);
         });
       });
