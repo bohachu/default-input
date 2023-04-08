@@ -9,7 +9,7 @@
 You can include the script directly from jsDelivr:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/bohachu/default-input/defaultInput.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/bohachu/default-input/defaultInput.js"></script>
 ```
 
 Alternatively, you can download the `defaultInput.js` file from the repository and include it in your project.
@@ -29,7 +29,7 @@ Alternatively, you can download the `defaultInput.js` file from the repository a
   <input type="text" id="username">
   <input type="email" id="email">
   <!-- Include the script -->
-  <script src="https://cdn.jsdelivr.net/gh/bohachu/default-input/defaultInput.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/bohachu/default-input/defaultInput.js"></script>
   <!-- Initialize the library -->
   <script>
     const defaultInput = new DefaultInput();
